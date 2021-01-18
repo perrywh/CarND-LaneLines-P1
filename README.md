@@ -7,7 +7,7 @@ Overview
 
 When we drive, we use our eyes to decide where to go.  The lines on the road that show us where the lanes are act as our constant reference for where to steer the vehicle.  Naturally, one of the first things we would like to do in developing a self-driving car is to automatically detect lane lines using an algorithm.
 
-The goals of this project include the following:
+The goal of this project includes the following:
 
 1. Write code that include a pipeline to identify and draw the lane lines on a few test images using Python and OpenCV. Once you can successfully identify the lines in an image, then cut and paste to put together the code into the block provided to run on a video stream. 
 2. Improve `draw_line()` in the pipeline so that the output draws solid lines over left and right lane lines, drawing from the bottom of the image extending out to the top of the region of interest.
