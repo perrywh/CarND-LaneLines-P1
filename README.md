@@ -44,18 +44,18 @@ The pipeline consists of the following steps:
 To draw a single line on the left and right lanes, I modified the `draw_lines()` function by 
 
 - separating left vs right line segments
-- get gradients `m` and intercepts `b` for each line segments
-- average the coordinate of each of the line segments and extrapolate the lines to the top and bottom of the lane in the region of interest
+- getting gradients `m` and intercepts `b` for each line segments
+- averaging the coordinates of each of the line segments and extrapolate the lines to the top and bottom of the lane in the region of interest
 
 Shortcomings
 ---
 - Hough lines shown on video stream are jittery.
-- When the contract between road surface and the lane line is reduced, e.g. lane marking on concrete road (compared to lane marking on black aspalt), the pipeline has difficulty finding the lane lines.  This shortcoming is shown in "challenge" video.
+- When the contrast between road surface and lane line is reduced, e.g. lane line marking on concrete road (compared to lane marking on black aspalt), the pipeline has difficulty finding the lane lines.  This shortcoming is shown in "challenge" video.
 
 Possible Improvements
 ---
 - To reduce jitteriness, take averages of Hough line coordinates from `draw_lines()` over multiple frames (i.e. average over several passes of lane extrapolation) from the video stream to smooth out the hough lines superimposed on the video image.
-- Use additional tools for parameter tuning to find optimal parameters for canny edge detection and Hough transform
+- Use additional tools for parameter tuning to find optimal parameters for canny edge detection and Hough transform.
 
 
 
