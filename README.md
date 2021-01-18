@@ -19,6 +19,9 @@ Pipeline Description
 The pipeline consists of the following steps:
 
 1. Convert image into grayscale.
+
+<img src="test_images_output/step1.png" width="480" alt="step 1 Image" />
+
 2. Apply gaussian smoothing to prepare for Canny transform.
 3. Set parameters and use OpenCV Canny function for edge detection to detect lane lines.
 4. Define a four-sided polygon to mask the image and show only a region of interest that include the lane lines.
