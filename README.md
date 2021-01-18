@@ -10,7 +10,7 @@ When we drive, we use our eyes to decide where to go.  The lines on the road tha
 The goals of this project include the following:
 
 1. Write code that include a pipeline to identify and draw the lane lines on a few test images using Python and OpenCV. Once you can successfully identify the lines in an image, then cut and paste to put together the code into the block provided to run on a video stream. 
-2. Improve `draw_line()` function in the pipeline so that the output draws solid lines over left and right lane lines, drawing from the bottom of the image extending out to the top of the region of interest.
+2. Improve `draw_line()` in the pipeline so that the output draws solid lines over left and right lane lines, drawing from the bottom of the image extending out to the top of the region of interest.
 3. (optional) Run the code on a challenge video and see if it can still properly find the lane lanes.
 
 Pipeline Description
@@ -41,14 +41,21 @@ The pipeline consists of the following steps:
 
 <img src="test_images_output/step6.png" width="480" alt="step 6 Image" />
 
+To draw a single line on the left and right lanes, I modified the `draw_lines()` function by 
+
+- separating left vs right line segments
+- get gradients `m` and intercepts `b` for each line segments
+- average the coordinate of each of the line segments and extrapolate the lines to the top and bottom of the lane in the region of interest
 
 Shortcomings
 ---
-- The Hough lines shown on the video are jittery.
+- Hough lines shown on video stream are jittery.
+- When the contract between road surface and the lane line is reduced, e.g. lane marking on concrete road (compared to lane marking on black aspalt), the pipeline has difficulty finding the lane lines.  This shortcoming is shown in "challenge" video.
 
 Possible Improvements
 ---
-- Take averages of Hough lines coordinates over multiple frames of the video stream to smooth out the hough lines superimposed on the video image.
+- To reduce jitteriness, take averages of Hough line coordinates from `draw_lines()` over multiple frames (i.e. average over several passes of lane extrapolation) from the video stream to smooth out the hough lines superimposed on the video image.
+- Use additional tools for parameter tuning to find optimal parameters for canny edge detection and Hough transform
 
 
 
