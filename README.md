@@ -7,11 +7,11 @@ Overview
 
 When we drive, we use our eyes to decide where to go.  The lines on the road that show us where the lanes are act as our constant reference for where to steer the vehicle.  Naturally, one of the first things we would like to do in developing a self-driving car is to automatically detect lane lines using an algorithm.
 
-The goal of this project is the following:
+The goals of this project include the following:
 
-1. Write code that include a pipeline to identify and draw the lane lines on a few test images using Python and OpenCV.
-2. Once you can successfully identify the lines in an image, then cut and paste to put together the code into the block provided to run on a video stream. 
-3. (optional) Run the code on a challenge video and see if it can properly draw the lane lanes.
+1. Write code that include a pipeline to identify and draw the lane lines on a few test images using Python and OpenCV. Once you can successfully identify the lines in an image, then cut and paste to put together the code into the block provided to run on a video stream. 
+2. Improve `draw_line()` function in the pipeline so that the output draws solid lines over left and right lane lines, drawing from the bottom of the image extending out to the top of the region of interest.
+3. (optional) Run the code on a challenge video and see if it can still properly find the lane lanes.
 
 Pipeline Description
 ---
@@ -25,11 +25,11 @@ The pipeline consists of the following steps:
 
 <img src="test_images_output/step2.png" width="480" alt="step 2 Image" />
 
-3. Set parameters and use OpenCV `canny` function for edge detection to detect lane lines.
+3. Set parameters and use `canny` function for edge detection to detect lane lines.
 
 <img src="test_images_output/step3.png" width="480" alt="step 3 Image" />
 
-4. Define a four-sided polygon to mask the image and show only a region of interest that include the lane lines.
+4. Define a four-sided polygon to mask the image and show only a region of interest that includes the lane lines.
 
 <img src="test_images_output/step4.png" width="480" alt="step 4 Image" />
 
