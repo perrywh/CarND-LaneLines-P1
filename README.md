@@ -1,7 +1,6 @@
 # **Finding Lane Lines on the Road** 
-[![Udacity - Self-Driving Car NanoDegree](https://s3.amazonaws.com/udacity-sdc/github/shield-carnd.svg)](http://www.udacity.com/drive)
 
-<img src="examples/laneLines_thirdPass.jpg" width="480" alt="Combined Image" />
+<img src="test_images/solidWhiteRight.jpg" width="480" alt="original Image" />
 
 Overview
 ---
@@ -19,8 +18,6 @@ Pipeline Description
 The pipeline consists of the following steps:
 
 1. Convert image into grayscale.
-
-<img src="test_images/solidWhiteRight.jpg" width="480" alt="original Image" />
 
 <img src="test_images_output/step1.png" width="480" alt="step 1 Image" />
 
