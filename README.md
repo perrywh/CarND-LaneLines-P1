@@ -17,20 +17,20 @@ Pipeline Description
 ---
 The pipeline consists of the following steps:
 
-1. Convert images into grayscale
+1. Convert image into grayscale
 2. Apply gaussian smoothing to prepare for Canny transform
 3. Set parameters and use OpenCV Canny function for edge detection to detect lane lines.
-4. Define a four sided polygon to mask the image and show only a region of interest that include the lane lines
-5. Set Hough transform parameter and run Hough on edge-detected masked image
+4. Define a four-sided polygon to mask the image and show only a region of interest that include the lane lines
+5. Set Hough transform parameters and run `Hough_lines` function on edge-detected masked image
 6. Superimpose Hough lines on original image
 
 Shortcomings
 ---
-- The Hough lines are jittery
+- The Hough lines shown on the video are jittery
 
 Possible Improvements
 ---
-- Take averages of Hough Lines coordinate over multiple frames of the vide stream to smooth out the hough lines superimposed on the video image
+- Take averages of Hough lines coordinates over multiple frames of the video stream to smooth out the hough lines superimposed on the video image
 
 
 
