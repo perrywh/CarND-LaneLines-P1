@@ -49,7 +49,7 @@ To draw a single line on the left and right lanes, I modified the `draw_lines()`
 
 Shortcomings
 ---
-- Hough lines shown on video stream are jittery.
+- Hough lines shown on video streams are jittery.
 - When the contrast between road surface and lane line is reduced, e.g. lane line marking on concrete road (compared to lane marking on black aspalt), the pipeline has difficulty finding the lane lines.  This shortcoming is shown in "challenge" video.
 
 Possible Improvements
