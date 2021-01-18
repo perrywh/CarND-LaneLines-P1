@@ -11,7 +11,7 @@ The goals of this project include the following:
 
 1. Write code that include a pipeline to identify and draw the lane lines on a few test images using Python and OpenCV. Once you can successfully identify the lines in an image, then cut and paste to put together the code into the block provided to run on a video stream. 
 2. Improve `draw_line()` in the pipeline so that the output draws solid lines over left and right lane lines, drawing from the bottom of the image extending out to the top of the region of interest.
-3. (optional) Run the code on a challenge video and see if it can still properly find the lane lanes.
+3. (optional) Run the code on a challenge video and see if it can still properly find the lane lines.
 
 Pipeline Description
 ---
