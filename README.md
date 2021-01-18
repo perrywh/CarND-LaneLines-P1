@@ -15,23 +15,24 @@ The goal of this project is to:
 
 Pipeline Description
 ---
-For this project, a great writeup should provide a detailed response to the "Reflection" section of the [project rubric](https://review.udacity.com/#!/rubrics/322/view). There are three parts to the reflection:
+The pipeline consists of the following steps:
 
-1. Describe the pipeline
+1. Convert images into grayscale
+2. Apply gaussian smoothing to prepare for Canny transform
+3. Set parameters and use OpenCV Canny function for edge detection to detect lane lines.
+4. Define a four sided polygon to mask the image and show only a region of interest that include the lane lines
+5. Set Hough transform parameter and run Hough on edge-detected masked image
+6. Superimpose Hough lines on original image
 
 Shortcomings
 ---
-blah blah
+- The Hough lines are jittery
 
 Possible Improvements
 ---
-3. Suggest possible improvements
+- Take averages of Hough Lines coordinate over multiple frames of the vide stream to smooth out the hough lines superimposed on the video image
 
-We encourage using images in your writeup to demonstrate how your pipeline works.  
 
-All that said, please be concise!  We're not looking for you to write a book here: just a brief description.
-
-You're not required to use markdown for your writeup.  If you use another method please just submit a pdf of your writeup. Here is a link to a [writeup template file](https://github.com/udacity/CarND-LaneLines-P1/blob/master/writeup_template.md). 
 
 
 
