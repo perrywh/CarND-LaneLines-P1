@@ -23,10 +23,25 @@ The pipeline consists of the following steps:
 <img src="test_images_output/step1.png" width="480" alt="step 1 Image" />
 
 2. Apply gaussian smoothing to prepare for Canny transform.
+
+<img src="test_images_output/step2.png" width="480" alt="step 2 Image" />
+
 3. Set parameters and use OpenCV Canny function for edge detection to detect lane lines.
+
+<img src="test_images_output/step3.png" width="480" alt="step 3 Image" />
+
 4. Define a four-sided polygon to mask the image and show only a region of interest that include the lane lines.
+
+<img src="test_images_output/step4.png" width="480" alt="step 4 Image" />
+
 5. Set Hough transform parameters and run `Hough_lines` function on edge-detected masked image.
+
+<img src="test_images_output/step5.png" width="480" alt="step 5 Image" />
+
 6. Superimpose Hough lines on original image.
+
+<img src="test_images_output/step6.png" width="480" alt="step 6 Image" />
+
 
 Shortcomings
 ---
