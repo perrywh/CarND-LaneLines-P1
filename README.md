@@ -8,29 +8,30 @@ Overview
 
 When we drive, we use our eyes to decide where to go.  The lines on the road that show us where the lanes are act as our constant reference for where to steer the vehicle.  Naturally, one of the first things we would like to do in developing a self-driving car is to automatically detect lane lines using an algorithm.
 
-The goal of this project is to:
+The goal of this project is the following:
 
-- Write code that include a pipeline to identify and draw the lane lines on a few test images using Python and OpenCV
-- Once you can successfully identify the lines in an image, then cut and paste to put together the code into the block provided to run on a video stream. 
+1. Write code that include a pipeline to identify and draw the lane lines on a few test images using Python and OpenCV.
+2. Once you can successfully identify the lines in an image, then cut and paste to put together the code into the block provided to run on a video stream. 
+3. (optional) Run the code on a challenge video and see if it can properly draw the lane lanes.
 
 Pipeline Description
 ---
 The pipeline consists of the following steps:
 
-1. Convert image into grayscale
-2. Apply gaussian smoothing to prepare for Canny transform
+1. Convert image into grayscale.
+2. Apply gaussian smoothing to prepare for Canny transform.
 3. Set parameters and use OpenCV Canny function for edge detection to detect lane lines.
-4. Define a four-sided polygon to mask the image and show only a region of interest that include the lane lines
-5. Set Hough transform parameters and run `Hough_lines` function on edge-detected masked image
-6. Superimpose Hough lines on original image
+4. Define a four-sided polygon to mask the image and show only a region of interest that include the lane lines.
+5. Set Hough transform parameters and run `Hough_lines` function on edge-detected masked image.
+6. Superimpose Hough lines on original image.
 
 Shortcomings
 ---
-- The Hough lines shown on the video are jittery
+- The Hough lines shown on the video are jittery.
 
 Possible Improvements
 ---
-- Take averages of Hough lines coordinates over multiple frames of the video stream to smooth out the hough lines superimposed on the video image
+- Take averages of Hough lines coordinates over multiple frames of the video stream to smooth out the hough lines superimposed on the video image.
 
 
 
