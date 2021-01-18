@@ -20,6 +20,8 @@ The pipeline consists of the following steps:
 
 1. Convert image into grayscale.
 
+<img src="test_images/solidWhiteRight.jpb" width="480" alt="original Image" />
+
 <img src="test_images_output/step1.png" width="480" alt="step 1 Image" />
 
 2. Apply gaussian smoothing to prepare for Canny transform.
