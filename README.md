@@ -20,7 +20,7 @@ The pipeline consists of the following steps:
 
 1. Convert image into grayscale.
 
-<img src="test_images/solidWhiteRight.jpb" width="480" alt="original Image" />
+<img src="test_images/solidWhiteRight.jpg" width="480" alt="original Image" />
 
 <img src="test_images_output/step1.png" width="480" alt="step 1 Image" />
 
@@ -28,7 +28,7 @@ The pipeline consists of the following steps:
 
 <img src="test_images_output/step2.png" width="480" alt="step 2 Image" />
 
-3. Set parameters and use OpenCV Canny function for edge detection to detect lane lines.
+3. Set parameters and use OpenCV `canny` function for edge detection to detect lane lines.
 
 <img src="test_images_output/step3.png" width="480" alt="step 3 Image" />
 
